@@ -165,3 +165,116 @@ h6::before {
     background-color: unset;
     box-shadow: unset;
 }
+
+
+/* 糖果屋 */
+
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+h1#site-title {
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+span#subtitle {
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+a#site-name {
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+
+/* 打字效果渐变 */
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#subtitle {
+    background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#subtitle:before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* 全局吸底音乐隐藏 */
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+    /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left: 0 !important;
+    /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+    /* 大小 */
+    font-size: 17px;
+    /* 颜色 */
+    color: #1b82f1;
+    opacity: 1;
+    overflow: visible;
+    height: auto !important;
+    min-height: 16px;
+}
+
+.aplayer .aplayer-lrc p {
+    font-weight: 700;
+    font-size: 15px;
+    color: #777;
+    line-height: 16px!important;
+    height: 16px!important;
+    padding: 0!important;
+    margin: 0!important;
+    transition: all .5s ease-out;
+    opacity: .4;
+    overflow: hidden
+}
